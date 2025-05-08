@@ -8,16 +8,14 @@ body {
   box-sizing: border-box;
 }
 .wrap {
-  margin: 2em;
+  /* margin: 2em; */
   background-color: white;
   border-bottom-right-radius: 150px;
   border-top-width: 10px;
-  padding-top: 20px;
-  padding-bottom: 20px;
-  margin-top: 0px;
-  margin-left: 0px;
-  padding-left: 10px;
-  margin-right: 0px;
+  padding: 20px 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
 }
 .background-overlay {
   /* background-image: url('hero.png'); */
@@ -30,6 +28,7 @@ header {
   display: flex;
   justify-content: space-between;
   text-align: center;
+  align-items: center;
 }
 
 span {
@@ -44,31 +43,43 @@ p {
   display: flex;
   align-items: center;
 }
+.btns {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  align-items: center;
+}
+.button {
+  font-weight: 700;
+  border-top-left-radius: 80px;
+  border-bottom-right-radius: 80px;
+  font-size: 14px;
+  height: 36px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+}
 .btn {
   background-color: #e30613;
-  text-decoration: none;
   color: white;
-  padding-bottom: 10px;
-  padding-top: 10px;
-  padding-right: 10px;
-  padding-left: 10px;
-  border-radius: 10px;
+  width: 50%;
 }
 .secBtn {
   background-color: white;
-  text-decoration: none;
   color: #e30613;
   border: 2px solid #e30613;
-  border-radius: 10px;
-  padding-left: 10px;
-  padding-bottom: 10px;
-  padding-right: 10px;
-  padding-top: 10px;
+  width: 50%;
+}
+.btns {
+  width: 100%;
+  display: flex;
 }
 .btn:hover {
   background-color: #f39200;
   color: white;
-  transition: background-color 0.3s ease, color 0.3s ease;
+  transition: background-color 0.3s ease-in-out, color 0.3s ease;
 }
 .secBtn:hover {
   background-color: #f39200;
@@ -136,11 +147,15 @@ main {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 16px;
+  gap: 32px;
 }
 
 .hero .left-side {
   width: 100%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
 }
 
 .hero .right-side {
@@ -173,12 +188,13 @@ main {
     gap: 1em;
     width: auto;
     height: auto;
-    justify-content: flex-start;
+    /* justify-content: flex-start; */
   }
   header {
     display: flex;
     gap: 16px;
     justify-content: start;
+    align-items: center;
     /* text-align: center; */
   }
 
@@ -191,20 +207,28 @@ main {
     font-size: 24px;
     color: #6e7b8f;
   }
-
-  .btn {
-    background-color: #e30613;
-    text-decoration: none;
-    color: white;
-    font-size: 18px;
-    padding-bottom: 5px;
-    padding-top: 5px;
-    padding-right: 20px;
-    padding-left: 20px;
-    display: inline-block;
+  .btns {
+    width: 100%;
+    display: flex;
+    justify-content: start;
+    gap: 16px;
+    align-items: center;
+  }
+  .button {
+    font-weight: 700;
     border-top-left-radius: 80px;
     border-bottom-right-radius: 80px;
-    /* height: 42px; */
+    font-size: 18px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+  }
+  .btn {
+    background-color: #e30613;
+    color: white;
+    max-width: 230px;
   }
 
   .btn:hover {
@@ -213,16 +237,11 @@ main {
     transition: background-color 0.3s ease, color 0.3s ease;
   }
   .secBtn {
-    background-color: white;
-    text-decoration: none;
+    background-color: transparent;
     color: #e30613;
     border: 2px solid #e30613;
-    border-top-left-radius: 80px;
-    border-bottom-right-radius: 80px;
-    padding-left: 30px;
-    padding-right: 50px;
-    padding-top: 5px;
-    padding-bottom: 5px;
+    width: 183px;
+    min-width: 183px;
   }
 
   .secBtn:hover {
@@ -237,6 +256,9 @@ main {
     padding-top: 0px;
     padding-bottom: 0px;
     margin-bottom: 0px;
+    max-width: 1366px;
+    width: 100%;
+    margin: 0 auto;
   }
   .hero-image {
     position: relative;
@@ -261,6 +283,10 @@ main {
 
   .hero .left-side {
     width: 50%;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
   }
 
   .hero .right-side {
@@ -279,7 +305,7 @@ main {
     right: -50px;
     top: 0;
   }
-  .subhead{
+  .subhead {
     padding-top: 10px;
   }
 }

@@ -1,6 +1,9 @@
 body {
-  font-family: playfair;
+  font-family: "playfair Display";
   /* background-color: #EFF5FA; */
+}
+.hide-mobile {
+  display: none;
 }
 * {
   padding: 0;
@@ -136,13 +139,6 @@ main {
   }
 }
 
-.next-scroll {
-  h1,
-  p {
-    text-align: center;
-  }
-}
-
 .hero {
   display: flex;
   flex-direction: column;
@@ -173,7 +169,100 @@ main {
   right: -50px;
   top: 0;
 }
-@media (min-width: 750px) {
+.next-scroll {
+  display: flex;
+
+  .left-side img {
+    width: 50%;
+
+    display: flex;
+    width: 350px;
+    height: 300px;
+  }
+  .right-side {
+    display: block;
+    align-items: center;
+    width: 100%;
+    h1,
+    p {
+      text-align: center;
+      padding-bottom: 20px;
+    }
+    h1 {
+      font-size: 30px;
+      font-weight: 700;
+    }
+    p {
+      font-family: "Montserrat";
+      font-size: 20px;
+      font-weight: 400;
+    }
+    img {
+      width: 100%;
+    }
+  }
+}
+.brought {
+  h1 {
+    width: 100%;
+    font-size: 30px;
+    font-weight: 700;
+    text-align: center;
+  }
+  p {
+    font-family: "Montserrat";
+    text-align: center;
+    font-size: 20px;
+    font-weight: 400;
+    padding: 20px 20px;
+  }
+  a {
+    align-items: center;
+  }
+  .discover {
+    display: flex;
+    justify-content: center;
+    a {
+      width: 264px;
+      height: 42px;
+    }
+  }
+}
+.slides {
+  display: flex;
+  overflow: auto;
+  gap: 20px;
+  padding: 40px 20px;
+  scroll-behavior: smooth;
+  .card {
+    flex: 0 0 auto;
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 180px;
+    padding: 16px;
+    text-align: center;
+    img {
+      width: 100%;
+      height: 120px;
+      object-fit: cover;
+      border-radius: 12px;
+    }
+    h3 {
+      font-size: 1.1em;
+      margin: 10px 0 6px;
+    }
+    a {
+      text-decoration: none;
+      color: #00aaff;
+      font-size: 0.9em;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+  }
+}
+@media (min-width: 1125px) {
   .hide-desktop {
     display: none;
   }
@@ -307,5 +396,136 @@ main {
   }
   .subhead {
     padding-top: 10px;
+  }
+
+  section {
+    background-image: url();
+  }
+  .row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: start;
+
+    .first-row {
+      width: 50%;
+      padding-top: 30px;
+    }
+
+    .second-row {
+      text-align: center;
+      align-items: center;
+      width: 50%;
+      height: 50%;
+
+      h1 {
+        font-size: 30px;
+        padding-bottom: 20px;
+      }
+
+      p {
+        padding-bottom: 30px;
+      }
+    }
+  }
+
+  .next-scroll {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    .left-side {
+      width: 50%;
+      text-align: center;
+      display: flex;
+      gap: 24px;
+      img {
+        padding-top: 20px;
+        width: 1011px;
+        max-width: 1011px;
+        height: 734px;
+      }
+    }
+    .right-side {
+      width: 60%;
+      .desktop {
+        display: none;
+      }
+      h1 {
+        font-size: 35px;
+        font-weight: 700;
+        text-align: center;
+      }
+      p {
+        font-family: "Montserrat";
+        text-align: center;
+        font-size: 24px;
+        font-weight: 400;
+        padding: 20px 20px;
+      }
+    }
+  }
+  .brought {
+    h1 {
+      width: 100%;
+      font-size: 30px;
+      font-weight: 700;
+      text-align: center;
+    }
+    p {
+      font-family: "Montserrat";
+      text-align: center;
+      font-size: 20px;
+      font-weight: 400;
+      padding: 20px 20px;
+    }
+    a {
+      align-items: center;
+    }
+    .discover {
+      display: flex;
+      justify-content: center;
+    }
+  }
+  .slides {
+    display: flex;
+    overflow: auto;
+    gap: 20px;
+    padding: 40px 20px;
+    scroll-behavior: smooth;
+    .card {
+      flex: 0 0 auto;
+      background: white;
+      border-radius: 20px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      width: 180px;
+      padding: 16px;
+      text-align: center;
+      img {
+        width: 100%;
+        height: 120px;
+        object-fit: cover;
+        border-radius: 12px;
+      }
+      h3 {
+        font-size: 1.1em;
+        margin: 10px 0 6px;
+      }
+      a {
+        text-decoration: none;
+        color: #00aaff;
+        font-size: 0.9em;
+      }
+      a:hover {
+        text-decoration: underline;
+      }
+    }
+    .card:hover {
+      transform: scale(1.05);
+      transition: transform 0.5s ease-in-out;
+      h3 {
+        border-bottom: 2px solid #e30613;
+      }
+    }
   }
 }

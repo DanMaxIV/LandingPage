@@ -204,23 +204,21 @@ main {
 }
 .brought {
   h1 {
+    display: block;
     width: 100%;
     font-size: 30px;
     font-weight: 700;
     text-align: center;
   }
   p {
+    display: block;
     font-family: "Montserrat";
     text-align: center;
     font-size: 20px;
     font-weight: 400;
-    padding: 20px 20px;
-  }
-  a {
-    align-items: center;
   }
   .discover {
-    display: flex;
+    display: block;
     justify-content: center;
     a {
       width: 264px;
@@ -266,7 +264,9 @@ main {
   .hide-desktop {
     display: none;
   }
-
+  .slides::-webkit-scrollbar {
+      display: none;
+    }
   nav ul {
     background: none;
     position: unset;
@@ -465,26 +465,34 @@ main {
       }
     }
   }
+  .next-slide{
+    display: flex;
+  }
   .brought {
+    width: 60%;
     h1 {
-      width: 100%;
-      font-size: 30px;
+      display: flex;
+      font-size: 44px;
       font-weight: 700;
-      text-align: center;
+      text-align: left;
+      justify-content: center;
+      padding-bottom: 24px;
     }
     p {
+      display: flex;
       font-family: "Montserrat";
-      text-align: center;
-      font-size: 20px;
+      text-align: left;
+      font-size: 24px;
       font-weight: 400;
-      padding: 20px 20px;
+      justify-content: center;
+      padding-bottom: 24px;
     }
     a {
       align-items: center;
     }
     .discover {
       display: flex;
-      justify-content: center;
+      justify-content: left;
     }
   }
   .slides {

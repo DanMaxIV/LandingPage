@@ -5,6 +5,9 @@ body {
 .hide-mobile {
   display: none;
 }
+.slides.hide-mobile {
+  display: none;
+}
 * {
   padding: 0;
   margin: 0;
@@ -217,7 +220,7 @@ main {
 .brought {
   display: flex;
   flex-direction: column;
-  gap: 24px;;
+  gap: 24px;
   h1 {
     /* display: block; */
     width: 100%;
@@ -231,7 +234,7 @@ main {
     text-align: center;
     font-size: 20px;
     font-weight: 400;
-  } 
+  }
   .discover {
     width: 100%;
     display: flex;
@@ -276,13 +279,92 @@ main {
     }
   }
 }
+.recipe {
+  gap: 20px;
+  .bg1 {
+    display: none;
+  }
+  h1,
+  p {
+    text-align: center;
+  }
+  .cards::-webkit-scrollbar {
+    display: none;
+  }
+  .cards {
+    display: flex;
+    overflow: auto;
+    gap: 10px;
+    padding: 40px 20px;
+    width: 100%;
+    scroll-behavior: smooth;
+    .recipe-card {
+      flex: 0 0 auto;
+      background-color: white;
+      border-radius: 20px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      padding-right: 50px;
+      border-left-width: 50px;
+      padding-left: 50px;
+      padding-bottom: 70px;
+      width: 521px;
+      height: 285px;
+      text-align: center;
+      opacity: 0.5;
+      transition: opacity 0.5s ease-in-out;
+      img {
+        position: relative;
+        top: -30px;
+        opacity: 1;
+      }
+      h3 {
+        font-size: 1.1em;
+        margin: 0px 10px 20px;
+      }
+      a {
+        text-decoration: none;
+        border: 2px solid #e30613;
+        color: #e30613;
+        border-top-left-radius: 80px;
+        border-bottom-right-radius: 80px;
+        padding-left: 59px;
+        padding-right: 60px;
+        padding-top: 4px;
+        padding-bottom: 4px;
+      }
+    }
+    .recipe-card:hover {
+      transform: scale(1.05);
+      transition: transform 0.5s ease-in-out;
+      opacity: 1;
+    }
+  }
+  .reps {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    a {
+      text-decoration: none;
+      border: solid;
+      color: #eff5fa;
+      background-color: #e30613;
+      padding: 4px 120px;
+      border-top-left-radius: 80px;
+      border-bottom-right-radius: 80px;
+      font-weight: 700;
+      font-size: 10px;
+    }
+  }
+}
 @media (min-width: 1125px) {
   .hide-desktop {
     display: none;
   }
   .slides::-webkit-scrollbar {
-      display: none;
-    }
+    display: none;
+  }
   nav ul {
     background: none;
     position: unset;
@@ -422,7 +504,8 @@ main {
     padding-top: 10px;
   }
 
-  section {
+  .hero,
+  .next-scroll {
     background-image: url();
     min-height: 90vh;
   }
@@ -469,7 +552,7 @@ main {
     .bg {
       position: absolute;
       width: fit-content;
-        display: block;
+      display: block;
       /* z-index: -1; */
       left: 0;
       right: 0;
@@ -509,21 +592,22 @@ main {
       }
     }
   }
-  .next-slide{
+  .next-slide {
     display: flex;
     max-width: 1366px;
     margin: 0 auto;
   }
   .brought {
-    width: 60%;
+    width: 50%;
     display: flex;
     flex-direction: column;
     align-items: start;
+    margin-left: 50px;
     h1 {
+      width: 100%;
       font-size: 44px;
       font-weight: 700;
       text-align: left;
-      padding-bottom: 24px;
     }
     p {
       display: flex;
@@ -543,18 +627,20 @@ main {
   .slides {
     display: flex;
     overflow: auto;
-    gap: 20px;
+    gap: 50px;
     padding: 40px 20px;
+    width: fit-content;
     scroll-behavior: smooth;
     .card {
       flex: 0 0 auto;
       background: white;
       border-radius: 20px;
       box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-      width: 180px;
-      padding: 16px;
+      width: 240px;
+      padding: 36px;
       text-align: center;
-      height: fit-content;
+      position: relative;
+      z-index: 1;
       img {
         width: 100%;
         height: 120px;
@@ -580,6 +666,115 @@ main {
       h3 {
         border-bottom: 2px solid #e30613;
       }
+    }
+  }
+  .slides.hide-mobile {
+    display: flex;
+    width: 100%;
+  }
+  .recipe {
+    h1,
+    p {
+      width: 100%;
+      text-align: center;
+      gap: 20px;
+      position: relative;
+    }
+    h1 {
+      margin: 100px 0px 20px 0px;
+      font-size: 44px;
+      font-weight: 700;
+    }
+    p {
+      font-size: 24px;
+      font-weight: 400;
+      padding-bottom: 50px;
+    }
+    .cards::-webkit-scrollbar {
+      display: none;
+    }
+    .cards {
+      display: flex;
+      overflow: auto;
+      gap: 50px;
+      padding: 40px 20px;
+      width: 100%;
+      scroll-behavior: smooth;
+      .recipe-card {
+        flex: 0 0 auto;
+        background-color: white;
+        border-radius: 20px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        padding-right: 50px;
+        border-left-width: 50px;
+        padding-left: 50px;
+        padding-bottom: 70px;
+        width: 521px;
+        height: 285px;
+        text-align: center;
+        opacity: 0.5;
+        transition: opacity 0.5s ease-in-out;
+        img {
+          position: relative;
+          top: -30px;
+          opacity: 1;
+        }
+        h3 {
+          font-size: 1.1em;
+          margin: 0px 10px 20px;
+        }
+        a {
+          text-decoration: none;
+          border: 2px solid #e30613;
+          color: #e30613;
+          border-top-left-radius: 80px;
+          border-bottom-right-radius: 80px;
+          padding-left: 59px;
+          padding-right: 60px;
+          padding-top: 4px;
+          padding-bottom: 4px;
+        }
+      }
+      .recipe-card:hover {
+        transform: scale(1.05);
+        transition: transform 0.5s ease-in-out;
+        opacity: 1;
+      }
+    }
+    .reps {
+      position: relative;
+      z-index: 1;
+      display: flex;
+      width: 100%;
+      justify-content: center;
+      a {
+        text-decoration: none;
+        border: solid;
+        color: #eff5fa;
+        background-color: #e30613;
+        padding: 4px 120px;
+        border-top-left-radius: 80px;
+        border-bottom-right-radius: 80px;
+        font-weight: 700;
+      }
+    }
+    .bg1 {
+      position: absolute;
+      width: 100%;
+      display: block;
+      top: 2020px;
+      height: 1050px;
+    }
+  }
+  .footer {
+    .footer-image {
+      position: absolute;
+      margin-top: 97px;
+      z-index: -1;
+    }
+    .footer-content{
+      margin-top: 300px;
+      position: absolute;
     }
   }
 }

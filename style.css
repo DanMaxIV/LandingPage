@@ -358,6 +358,16 @@ main {
     }
   }
 }
+.form {
+  background-color: rgba(0, 0, 0, 0.5);
+  border: 1px solid #555;
+  border-radius: 4px;
+  padding: 18px 15px 6px 15px;
+  font-size: 1em;
+  color: #fff;
+  width: 300px;
+  box-sizing: border-box;
+}
 @media (min-width: 1125px) {
   .hide-desktop {
     display: none;
@@ -769,12 +779,36 @@ main {
   .footer {
     .footer-image {
       position: absolute;
-      margin-top: 97px;
       z-index: -1;
+      top: 2776.890px;
+      overflow: hidden;
     }
-    .footer-content{
-      margin-top: 300px;
+    .footer-content {
+      margin: 200px 0px 0px 50px;
       position: absolute;
+      h1 {
+        margin-bottom: 40px;
+        color: #ffffff;
+      }
+    }
+    .form-container{
+      column-gap: 1em;
+    }
+    .form {
+      background-color: rgba(110, 123, 143, 0.27);
+      border: 1px solid #555;
+      border-radius: 9px;
+      padding: 18px 15px 6px 15px;
+      font-size: 1em;
+      color: #fff;
+      width: 300px;
+      margin-bottom: 20px;
+      margin-right: 20px;
+      box-sizing: border-box;
+    }
+    .form.msg{
+      width: 632px;
+      height: 112px;
     }
   }
 }

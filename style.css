@@ -66,6 +66,8 @@ p {
   justify-content: center;
   align-items: center;
   text-decoration: none;
+  border-top-right-radius: 16px;
+  border-bottom-left-radius: 16px;
 }
 .btn {
   background-color: #e30613;
@@ -362,7 +364,7 @@ main {
   background-color: rgba(0, 0, 0, 0.5);
   border: 1px solid #555;
   border-radius: 4px;
-  padding: 18px 15px 6px 15px;
+  /* padding: 18px 15px 6px 15px; */
   font-size: 1em;
   color: #fff;
   width: 300px;
@@ -683,6 +685,8 @@ main {
     width: 100%;
   }
   .recipe {
+    height: 100vh;
+    position: relative;
     h1,
     p {
       width: 100%;
@@ -757,58 +761,83 @@ main {
       display: flex;
       width: 100%;
       justify-content: center;
+      align-items: center;
+
       a {
         text-decoration: none;
         border: solid;
+        font-size: 16px;
         color: #eff5fa;
         background-color: #e30613;
-        padding: 4px 120px;
+        height: 35px;
+        border-top-right-radius: 16px;
+        border-bottom-left-radius: 16px;
         border-top-left-radius: 80px;
         border-bottom-right-radius: 80px;
         font-weight: 700;
+        display: flex;
+        justify-content: center;
+        align-items: center;
       }
     }
     .bg1 {
       position: absolute;
       width: 100%;
       display: block;
-      top: 2020px;
-      height: 1050px;
+      /* height: max-content; */
+      top: -300px;
+      /* height: 1050px; */
     }
   }
+
   .footer {
-    .footer-image {
-      position: absolute;
-      z-index: -1;
-      top: 2776.890px;
-      overflow: hidden;
-    }
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    background-image: url("/img/footer.png");
+    background-size: cover; /* or cover, depending on what you want */
+    background-repeat: no-repeat;
+    background-position: center;
+    min-height: 100vh;
+
     .footer-content {
-      margin: 200px 0px 0px 50px;
       position: absolute;
+      padding: 2rem;
       h1 {
         margin-bottom: 40px;
         color: #ffffff;
       }
+      max-width: 632px;
+      width: 100%;
     }
-    .form-container{
-      column-gap: 1em;
+
+    .form-container {
+      /* column-gap: 1em; */
+
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
     }
-    .form {
+    .inputs {
       background-color: rgba(110, 123, 143, 0.27);
       border: 1px solid #555;
       border-radius: 9px;
-      padding: 18px 15px 6px 15px;
-      font-size: 1em;
+      padding-left: 12px;
+    }
+    .form {
+      height: 42px;
+      font-size: 14px;
       color: #fff;
-      width: 300px;
-      margin-bottom: 20px;
-      margin-right: 20px;
-      box-sizing: border-box;
+      width: 100%;
     }
-    .form.msg{
-      width: 632px;
+    textarea {
+      resize: none;
       height: 112px;
+      padding-top: 12px;
     }
+    /* ::placeholder{
+      font-size: 14px;
+    } */
   }
 }

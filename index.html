@@ -162,6 +162,8 @@
             </div>
           </div>
         </section>
+
+        <!-- Recipes Section -->
         <section class="recipe">
           <img src="/img/BG1.png" alt="background" class="bg1" />
           <h1>With the right ingredients, <br />magic can happen.</h1>
@@ -187,24 +189,42 @@
             </div>
           </div>
           <div class="reps">
-            <a href="#">view all Recipes</a>
+            <a href="#">View all Recipes</a>
           </div>
         </section>
+
+        <!-- Footer Section -->
         <section class="footer">
-          <img src="/img/footer.png" alt="background" class="footer-image" />
           <div class="footer-content">
             <a href="index.html">
               <img src="/img/logo1.png" alt="logo" />
             </a>
             <h1>We would <br />Love to Hear <br />from you</h1>
-            <div class="form-container">
-              <input type="name" placeholder="First Name" class="form"/>
-              <input type="text" placeholder="Surname" class="form"/><br />
-              <input type="text" placeholder="Mobile Number" class="form"/>
-              <input type="text" placeholder="Subject" class="form"/><br />
-              <input type="text" placeholder="Message" class="form msg"/>
-            </div>
-            <a href="#" class="btn button">Send</a>
+            <form onsubmit="handleSubmit(event)" class="form-container">
+              <div style="display: flex; width: 100%; gap: 24px">
+                <input
+                  type="name"
+                  placeholder="First Name"
+                  class="form inputs"
+                />
+                <input type="text" placeholder="Surname" class="form inputs" />
+              </div>
+              <div style="display: flex; width: 100%; gap: 24px">
+                <input
+                  type="text"
+                  placeholder="Mobile Number"
+                  class="form inputs"
+                />
+                <input type="text" placeholder="Subject" class="inputs form" />
+              </div>
+
+              <textarea
+                placeholder="Message"
+                class="inputs"
+                style="width: 100%"
+              ></textarea>
+              <button class="btn button submitBtn">Send</button>
+            </form>
           </div>
         </section>
       </main>
@@ -214,6 +234,10 @@
       const menu = document.querySelector("nav ul");
       const menuBtn = document.querySelector(".menu-open");
       const closeBtn = document.querySelector(".menu-close");
+      function handleSubmit(event) {
+        event.preventDefault();
+        alert("Form submitted successfully!");
+      }
 
       menuBtn.addEventListener("click", () => {
         menu.classList.add("open");
